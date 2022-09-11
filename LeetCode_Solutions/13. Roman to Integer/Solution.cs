@@ -2,7 +2,7 @@
 {
     public class Solution
     {
-        public static int GetIntegerFromRoman(string roman = "ZMCMLXXXIV")
+        public static int GetIntegerFromRoman(string roman = "MCMLXXXIV")
         {
             // Accepted characters
             Dictionary<char, int> map = new()
