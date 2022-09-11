@@ -2,7 +2,7 @@
 {
     public class Solution
     {
-        public static int GetIntegerFromRoman(string roman = "MCMLXXXIV")
+        public static int GetIntegerFromRoman(string roman = "ZMCMLXXXIV")
         {
             // Accepted characters
             Dictionary<char, int> map = new()
@@ -21,10 +21,17 @@
                 return 0;
 
             // Constraint to accepted characters
-            foreach (var item in roman)
-                for (var i = 0; i < map.Count; i++)
-                    if (map[item].Equals(null))
-                        return 0;
+            try
+            {
+                foreach (var item in roman)
+                    for (var i = 0; i < map.Count; i++)
+                        if (map[item].Equals(null))
+                            return 0;
+            }
+            catch (KeyNotFoundException)
+            {
+                return 0;
+            }
 
             // Operation Roman to Integer
             var result = 0;
