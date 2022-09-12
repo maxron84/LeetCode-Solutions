@@ -37,7 +37,10 @@
             var result = 0;
 
             for (var i = 0; i < roman.Length; i++)
-                result = !(i > 0 && map[roman[i]] > map[roman[i - 1]]) ? result + map[roman[i]] : result + map[roman[i]] - 2 * map[roman[i - 1]];
+                if (!(i > 0 && map[roman[i]] > map[roman[i - 1]]))
+                    result += map[roman[i]];
+                else
+                    result += map[roman[i]] - 2 * map[roman[i - 1]];
 
             // Constraint to accepted valuerange
             if (result < 1 || result > 3999)
