@@ -1,6 +1,6 @@
 ﻿namespace LeetCode_Solutions._13._Roman_to_Integer
 {
-    public class Solution
+    public static class Solution
     {
         public static int GetIntegerFromRoman(string roman = "MCMLXXXIV")
         {
