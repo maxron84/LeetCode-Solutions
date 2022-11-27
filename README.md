@@ -1,3 +1,2 @@
 # LeetCode_Solutions
-Own & CP
-Use debugger to walk through!
+Own & CP, use debugger to walk through!
