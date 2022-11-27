@@ -26,7 +26,7 @@
                 foreach (var item in roman)
                     for (var i = 0; i < map.Count; i++)
                         if (map[item].Equals(null))
-                            return 0;
+                            break;
             }
             catch (KeyNotFoundException)
             {
