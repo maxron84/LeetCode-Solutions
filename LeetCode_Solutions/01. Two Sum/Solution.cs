@@ -1,4 +1,4 @@
-namespace LeetCode_Solutions._1._Two_Sum;
+namespace LeetCode_Solutions._01._Two_Sum;
 
 public static class Solution
 {

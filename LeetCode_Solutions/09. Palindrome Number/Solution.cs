@@ -1,8 +1,8 @@
-﻿namespace LeetCode_Solutions._9._Palindrome_Number
+﻿namespace LeetCode_Solutions._09._Palindrome_Number
 {
     public static class Solution
     {
-        public static bool IsPalindromeNumber(int candidate = 121)
+        public static bool IsPalindromeNumber(int candidate)
         {
             if (candidate < 0)
                 return false;
@@ -19,7 +19,7 @@
 
             if (reversed != original)
                 return false;
-            
+
             return true;
         }
     }
