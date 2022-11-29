@@ -4,7 +4,7 @@ public class Solution
 {
     // Logic translated from the following approach in Java:
     // https://github.com/ani03sha/RedQuarkTutorials/blob/master/LeetCode/Java/src/main/java/org/redquark/tutorials/leetcode/AddTwoNumbers.java
-    public static ListNode<int> GetSum(ListNode<int>? digitsOne, ListNode<int>? digitsTwo)
+    public static ListNode<int> GetSum(ListNode<int>? listNode_1, ListNode<int>? listNode_2)
     {
         // Head of the new linked list - this is the head of the resultant list
         ListNode<int>? head = null;
@@ -12,26 +12,26 @@ public class Solution
         // Reference of head which is null at this point
         ListNode<int>? temp = null;
 
-        // Carry
+        // Carry (Übertrag)
         int carry = 0;
 
         // Loop for the two lists
-        while (digitsOne != null || digitsTwo != null)
+        while (listNode_1 != null || listNode_2 != null)
         {
             // At the start of each iteration, we should add carry from the last iteration
             int sum = carry;
 
             // Since the lengths of the lists may be unequal, we are checking if the current node is null for one of the lists
-            if (digitsOne != null)
+            if (listNode_1 != null)
             {
-                sum += digitsOne.Value;
-                digitsOne = digitsOne.Next;
+                sum += listNode_1.Value;
+                listNode_1 = listNode_1.Next;
             }
 
-            if (digitsTwo != null)
+            if (listNode_2 != null)
             {
-                sum += digitsTwo.Value;
-                digitsTwo = digitsTwo.Next;
+                sum += listNode_2.Value;
+                listNode_2 = listNode_2.Next;
             }
 
             // At this point, we will add the total sum % 10 to the new node in the resultant list

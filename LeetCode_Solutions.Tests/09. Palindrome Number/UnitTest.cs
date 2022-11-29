@@ -2,21 +2,27 @@ namespace LeetCode_Solutions.Tests._09._Palindrome_Number;
 
 public class UnitTest
 {
-    [Fact]
-    public Task Palindrome_Number()
+    [Theory]
+    [MemberData(nameof(GetTestData))]
+    public Task Should_IsPalindromeNumber(int candidate)
     {
-        // Given
-        int operand = 121;
+        // Given is MemberData
 
         // When
-        bool actual = LeetCode_Solutions
+        bool validation = LeetCode_Solutions
             ._09._Palindrome_Number
             .Solution
-            .IsPalindromeNumber(operand);
+            .IsPalindromeNumber(candidate);
 
         // Then
-        Assert.True(actual);
+        Assert.True(validation);
 
         return Task.CompletedTask;
+    }
+
+    private static IEnumerable<object[]> GetTestData()
+    {
+        yield return new object[] { 121 };
+        yield return new object[] { 1_000_000_001 };
     }
 }

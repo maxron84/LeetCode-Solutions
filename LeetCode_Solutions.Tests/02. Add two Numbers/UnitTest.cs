@@ -6,7 +6,7 @@ public class UnitTest
 {
     [Theory]
     [MemberData(nameof(GetTestData))]
-    public Task Add_Two_Numbers(ListNode<int> l1, ListNode<int> l2, ListNode<int> expected)
+    public Task Should_Add_Two_Numbers(ListNode<int> operand_1, ListNode<int> operand_2, ListNode<int> expected)
     {
         // Given is MemberData
 
@@ -17,7 +17,7 @@ public class UnitTest
         ListNode<int> actual = LeetCode_Solutions
             ._02._Add_two_Numbers
             .Solution
-            .GetSum(l1, l2);
+            .GetSum(operand_1, operand_2);
 
         while (expected.Next != null && actual.Next != null)
         {
@@ -37,23 +37,24 @@ public class UnitTest
     {
         yield return new object[]
         {
-            // 243
+            // operand_1: 243
             new ListNode<int>(2) { Next = new(4) { Next = new(3) } },
-            // 564
+            // operand_2: 564
             new ListNode<int>(5) { Next = new(6) { Next = new(4) } },
-            // 708
+            // expected: 708
             new ListNode<int>(7) { Next = new(0) { Next = new(8) } }
         };
 
+        // all: 0
         yield return new object[] { new ListNode<int>(0), new ListNode<int>(0), new ListNode<int>(0) };
 
         yield return new object[]
         {
-            // 999_999_9
+            // operand_1: 999_999_9
             new ListNode<int>(9) { Next = new(9) { Next = new(9) { Next = new(9) { Next = new(9) { Next = new(9) { Next = new(9) { Next = new(9) { Next = new(9) } } } } } } } },
-            // 999_9
+            // operand_2: 999_9
             new ListNode<int>(9) { Next = new(9) { Next = new(9) { Next = new(9) } } },
-            // 899_900_01
+            // expected: 899_900_01
             new ListNode<int>(8) { Next = new(9) { Next = new(9) { Next = new(9) { Next = new(0) { Next = new(0) { Next = new(0) { Next = new(1) } } } } } } }
         };
     }
