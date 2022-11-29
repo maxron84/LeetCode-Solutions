@@ -1,2 +1,2 @@
 # LeetCode_Solutions
-Own & CP, use debugger to walk through!
+Own & CP, use Xunit to test and debug the solutions!
