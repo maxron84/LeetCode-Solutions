@@ -1,6 +1,6 @@
 namespace LeetCode_Solutions._02._Add_two_Numbers;
 
-public class Solution
+public static class Solution
 {
     // Logic translated from the following approach in Java:
     // https://github.com/ani03sha/RedQuarkTutorials/blob/master/LeetCode/Java/src/main/java/org/redquark/tutorials/leetcode/AddTwoNumbers.java
